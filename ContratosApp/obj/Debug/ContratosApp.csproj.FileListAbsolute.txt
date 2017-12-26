@@ -3,6 +3,8 @@ C:\Accenture\ContratosApp\ContratosApp\bin\ContratosApp.dll.config
 C:\Accenture\ContratosApp\ContratosApp\bin\ContratosApp.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\ContratosApp.pdb
 C:\Accenture\ContratosApp\ContratosApp\bin\Antlr3.Runtime.dll
+C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.dll
+C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.SqlServer.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\Microsoft.AI.DependencyCollector.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -21,6 +23,8 @@ C:\Accenture\ContratosApp\ContratosApp\bin\System.Web.WebPages.Deployment.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\System.Web.WebPages.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\System.Web.WebPages.Razor.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\WebGrease.dll
+C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.xml
+C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.SqlServer.xml
 C:\Accenture\ContratosApp\ContratosApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Accenture\ContratosApp\ContratosApp\bin\System.Web.Helpers.xml
 C:\Accenture\ContratosApp\ContratosApp\bin\System.Web.Mvc.xml
@@ -43,13 +47,6 @@ C:\Accenture\ContratosApp\ContratosApp\bin\es\System.Web.Razor.resources.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\es\System.Web.WebPages.resources.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Accenture\ContratosApp\ContratosApp\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.csprojResolveAssemblyReference.cache
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.csproj.CoreCompileInputs.cache
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.dll
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.pdb
-C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.dll
-C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.SqlServer.dll
-C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.xml
-C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.SqlServer.xml
-C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.Migrations.Inicial.resources
-C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.csproj.GenerateResource.Cache

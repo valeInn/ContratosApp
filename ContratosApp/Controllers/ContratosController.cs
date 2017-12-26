@@ -19,15 +19,15 @@ namespace ContratosApp.Controllers
 
         {
 
-            
             var contratos = db.Contratos
                                         .Include(c => c.Locador)
                                         .Include(c => c.Locatario)
                                         .Include(c => c.Garante)
                                         .Include(c => c.Propiedades);
-
+                                        
             return View(contratos.ToList());
-          
+          /*
+            return View(); */
         }
 
         // GET: Contratos/Details/5
@@ -59,7 +59,7 @@ namespace ContratosApp.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ContratoID,NombreContrato,FechaInicio,FechaFinal,Address,Persona")] Contrato contrato)
+        public ActionResult Create([Bind(Include = "NombreContrato,FechaInicio,FechaFinal")] Contrato contrato)
         {
             if (ModelState.IsValid)
             {

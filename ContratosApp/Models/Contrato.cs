@@ -25,9 +25,13 @@ namespace ContratosApp.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Fecha de Finalización")]
         public DateTime FechaFinal { get; set; }
+
         public Propiedad Propiedades { get; set; }
+     
         public Locatario Locatario { get; set; }
+       
         public Garante Garante { get; set; }
+     
         public Locador Locador { get; set; }
         
 

@@ -9,7 +9,7 @@ namespace ContratosApp.Models
 {
     public class ContratoVM
     {
-      /*  
+      
         [Display(Name = "Nombre del Contrato")]
         public string NombreContrato { get; set; }
         [Required]
@@ -23,12 +23,18 @@ namespace ContratosApp.Models
         [Display(Name = "Fecha de Finalización")]
         public DateTime FechaFinal { get; set; }
         [Display(Name = "Dirección de la Propiedad")]
-        */
-        public Contrato Contratoss { get; set; }
-        public Propiedad Propiedadees { get; set; }
-        public Locatario Locatarios { get; set; }
-        public Garante Garantes { get; set; }
-        public Locador Locadores { get; set; }
+        public string DireccionPropiedad { get; set; }
+        public string NombreLocatario { get; set; }
+        public string ApellidoLocatario { get; set; }
+        public string TelefonoLocatario { get; set; }
+        public string NombreGarante { get; set; }
+        public string ApellidoGarante { get; set; }
+        public string TelefonoGarante { get; set; }
+        public string NombreLocador { get; set; }
+        public string ApellidoLocador { get; set; }
+        public string TelefonoLocador { get; set; }
+
+
 
         public virtual ICollection<Contrato> Contratoes { get; set; }
     }
