@@ -11,9 +11,7 @@ namespace ContratosApp.Models
     {
         
 
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        [Key]
-        public int IDGarante { get; set; }
+
         public virtual ICollection<Contrato> Contratos { get; set; }
 
     }

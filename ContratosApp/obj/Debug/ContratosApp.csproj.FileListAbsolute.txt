@@ -53,7 +53,3 @@ C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.xml
 C:\Accenture\ContratosApp\ContratosApp\bin\EntityFramework.SqlServer.xml
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.Migrations.Inicial.resources
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.csproj.GenerateResource.Cache
-C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.Migrations.segunda.resources
-C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.Migrations.Tercera.resources
-C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.Migrations.Tercera1.resources
-C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.Migrations.cuarta.resources

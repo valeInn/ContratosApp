@@ -11,7 +11,7 @@ namespace ContratosApp.Models
         {
             var locadores = new List<Locador>
             {
-            new Locador{IDLocador=1, Name="Monica",LastName="Ascheri", PhoneNumber="011-15-62456998"  },
+            new Locador{ Name="Monica",LastName="Ascheri", PhoneNumber="011-15-62456998"  },
 
             };
 
@@ -19,14 +19,14 @@ namespace ContratosApp.Models
             context.SaveChanges();
             var locatarios = new List<Locatario>
             {
-            new Locatario{IDLocatario=1, Name="Mariano",LastName="Cordoba",PhoneNumber="011-15-48795523",},
+            new Locatario{ Name="Mariano",LastName="Cordoba",PhoneNumber="011-15-48795523",},
 
             };
             locatarios.ForEach(s => context.Locatarios.Add(s));
             context.SaveChanges();
             var garantes = new List<Garante>
             {
-            new Garante{IDGarante=1, Name="Susana",LastName= "Lazo",PhoneNumber="011-46547896"},
+            new Garante{ Name="Susana",LastName= "Lazo",PhoneNumber="011-46547896"},
 
             };
             garantes.ForEach(s => context.Garantes.Add(s));

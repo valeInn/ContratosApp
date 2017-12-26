@@ -1,0 +1,96 @@
+﻿@model ContratosApp.Models.Contrato
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Contrato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaFinal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Locador.Name)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.Locador.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Locador.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.Locador.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Locador.PhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.Locador.PhoneNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Locatario.Name)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.Locatario.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Locatario.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.Locatario.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Locatario.PhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.Locatario.PhoneNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Garante.Name)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.Garante.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Garante.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.Garante.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Garante.PhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayNameFor(model => model.Garante.PhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContratoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -39,13 +39,13 @@ namespace ContratosApp.Controllers
             //Definimos la conexión al servidor SMTP que vamos a usar
             //para mandar el mail. Hay que buscar como es en nuestro proveedor.
             SmtpClient clienteSmtp = new SmtpClient("smtp.gmail.com", 587);
-            clienteSmtp.Credentials = new System.Net.NetworkCredential("testcomunidadit@gmail.com", "testcomit2017");
+            clienteSmtp.Credentials = new System.Net.NetworkCredential("contratosapp@gmail.com", "contratosapp123");
             clienteSmtp.EnableSsl = true;
 
             //Generamos el objeto MAIL a enviar
             MailMessage mailParaAdministrador = new MailMessage();
-            mailParaAdministrador.From = new MailAddress("testcomunidadit@gmail.com", "Test ComunidadIT");
-            mailParaAdministrador.To.Add("testcomunidadit@gmail.com");
+            mailParaAdministrador.From = new MailAddress("contratosapp@gmail.com", "Test ComunidadIT");
+            mailParaAdministrador.To.Add("contratosapp@gmail.com");
             mailParaAdministrador.Subject = "Nuevo contacto";
             mailParaAdministrador.Body = "Te contactó: " + nombre + "(" + mail + ").\nSu mensaje fue: " + mensaje;
 
@@ -54,7 +54,7 @@ namespace ContratosApp.Controllers
 
             //vamos a mandarle un mail al usuario que nos dejó el contacto
             MailMessage mailAUsuario = new MailMessage();
-            mailAUsuario.From = new MailAddress("testcomunidadit@gmail.com", "Test ComunidadIT");
+            mailAUsuario.From = new MailAddress("contratosapp@gmail.com", "Test ComunidadIT");
             mailAUsuario.To.Add(mail);
             mailAUsuario.Subject = "Gracias por contactarte con nosotros!";
             mailAUsuario.IsBodyHtml = true;

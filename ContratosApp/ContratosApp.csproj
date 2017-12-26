@@ -148,30 +148,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ContratsController.cs" />
+    <Compile Include="Controllers\ContratosController.cs" />
+    <Compile Include="Controllers\ContratoVMController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712172031206_Inicial.cs" />
-    <Compile Include="Migrations\201712172031206_Inicial.Designer.cs">
-      <DependentUpon>201712172031206_Inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712180028108_segunda.cs" />
-    <Compile Include="Migrations\201712180028108_segunda.Designer.cs">
-      <DependentUpon>201712180028108_segunda.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712181943310_Tercera.cs" />
-    <Compile Include="Migrations\201712181943310_Tercera.Designer.cs">
-      <DependentUpon>201712181943310_Tercera.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712182136225_Tercera1.cs" />
-    <Compile Include="Migrations\201712182136225_Tercera1.Designer.cs">
-      <DependentUpon>201712182136225_Tercera1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712190219133_cuarta.cs" />
-    <Compile Include="Migrations\201712190219133_cuarta.Designer.cs">
-      <DependentUpon>201712190219133_cuarta.cs</DependentUpon>
+    <Compile Include="Migrations\201712222202477_Inicial.cs" />
+    <Compile Include="Migrations\201712222202477_Inicial.Designer.cs">
+      <DependentUpon>201712222202477_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contrato.cs" />
@@ -183,6 +168,7 @@
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Propiedad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\ContratoVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -223,15 +209,20 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Contrats\Create.cshtml" />
-    <Content Include="Views\Contrats\Delete.cshtml" />
-    <Content Include="Views\Contrats\Details.cshtml" />
-    <Content Include="Views\Contrats\Edit.cshtml" />
-    <Content Include="Views\Contrats\Index.cshtml" />
-    <Content Include="Views\Contrats\Buscar.cshtml" />
+    <Content Include="Views\ContratoVM\IndexVM.cshtml" />
+    <Content Include="Views\Contratos\Create.cshtml" />
+    <Content Include="Views\Contratos\Delete.cshtml" />
+    <Content Include="Views\Contratos\Details.cshtml" />
+    <Content Include="Views\Contratos\Edit.cshtml" />
+    <Content Include="Views\Contratos\Index.cshtml" />
+    <Content Include="Views\Contratos\Buscar.cshtml" />
+    <Content Include="Views\Contratos\BuscadorLocatario.cshtml" />
+    <Content Include="Views\Contratos\BuscadorLocador.cshtml" />
+    <Content Include="Views\Contratos\BuscadorGarante.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -247,20 +238,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201712172031206_Inicial.resx">
-      <DependentUpon>201712172031206_Inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712180028108_segunda.resx">
-      <DependentUpon>201712180028108_segunda.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712181943310_Tercera.resx">
-      <DependentUpon>201712181943310_Tercera.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712182136225_Tercera1.resx">
-      <DependentUpon>201712182136225_Tercera1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712190219133_cuarta.resx">
-      <DependentUpon>201712190219133_cuarta.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712222202477_Inicial.resx">
+      <DependentUpon>201712222202477_Inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -19,8 +19,8 @@
         <th colspan="3"><strong>Locatario</strong></th>
         <th colspan="3"><strong>Garante</strong></th>
     </tr>
-    <tr class="tabla">
-        
+
+    <tr>
         <th>
             @Html.DisplayNameFor(model => model.NombreContrato)
         </th>
@@ -33,7 +33,6 @@
         <th>
             @Html.DisplayNameFor(model => model.FechaFinal)
         </th>
-
         <th>
             @Html.DisplayNameFor(model => model.Locador.Name)
         </th>
@@ -61,9 +60,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Garante.PhoneNumber)
         </th>
-        
-       
+        <th></th>
     </tr>
+        
 
 @foreach (var item in Model) {
     <tr>
@@ -107,9 +106,9 @@
             @Html.DisplayFor(modelItem => item.Garante.PhoneNumber)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.NombreContrato }) |
-            @Html.ActionLink("Details", "Details", new { id=item.NombreContrato }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.NombreContrato })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContratoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContratoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContratoID })
         </td>
     </tr>
 }

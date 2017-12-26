@@ -8,7 +8,7 @@ namespace ContratosApp.Models
 {
     public abstract class Persona
     {
-
+        public int ID { get; set; }
         [Required]
         [Display(Name = "Nombre")]
         public string Name { get; set; }

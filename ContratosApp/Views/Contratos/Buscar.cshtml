@@ -1,0 +1,52 @@
+﻿@model  IEnumerable<ContratosApp.Models.Contrato>
+@{
+    ViewBag.Title = "Buscar";
+}
+
+<h2>Buscar</h2>
+<!--
+<div>
+    @using (Html.BeginForm())
+    {
+        <p>
+            Buscar por Nombre de Locador: @Html.TextBox("BuscarLocador")
+            <input type="submit" value="Buscar" />
+        </p>
+    }
+    
+</div>
+    -->
+
+<div >
+    <form action="@Url.Action("BuscarLocador","Contratos")" >
+        <label class="control-label col-md-2" for="nombre">Nombre : </label><input name="nombre" type="text" placeholder="Ingresá el nombre del locador..." required>
+
+        <input class="btn btn-default" type="submit" value="Buscar...">
+
+    </form>
+</div>
+    
+<div >
+    <form action="@Url.Action("BuscarLocatario", "Contratos")" >
+
+        <label class="control-label col-md-2"for="nombre">Nombre : </label><input name="nombre" type="text" placeholder="Ingresá el nombre del locatario..." required>
+
+
+        <input class="btn btn-default" type="submit" value="Buscar...">
+
+    </form>
+    
+</div>
+
+<div>
+    <form action="@Url.Action("BuscarGarante", "Contratos")" >
+
+        <label class="control-label col-md-2"for="nombre">Nombre : </label><input name="nombre" type="text" placeholder="Ingresá el nombre del Garante..." required>
+
+
+        <input class="btn btn-default" type="submit" value="Buscar...">
+
+    </form>
+
+</div>
+

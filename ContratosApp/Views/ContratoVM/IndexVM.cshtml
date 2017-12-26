@@ -1,0 +1,117 @@
+﻿@model  ContratosApp.Models.ContratoVM
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Nuevo Contrato", "Create")
+</p>
+<p>
+    @Html.ActionLink("Buscar Contrato", "Buscar")
+</p>
+<table class="table">
+    <tr>
+        <th colspan="4"><strong>Contrato</strong></th>
+        <th colspan="3"><strong>Locador</strong></th>
+        <th colspan="3"><strong>Locatario</strong></th>
+        <th colspan="3"><strong>Garante</strong></th>
+    </tr>
+    <tr class="tabla">
+
+        <th>
+            @Html.DisplayNameFor(model => model.Contratoss.NombreContrato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Propiedadees.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contratoss.FechaInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contratoss.FechaFinal)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Locadores.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Locadores.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Locadores.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Locatarios.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Locatarios.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Locatarios.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Garantes.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Garantes.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Garantes.PhoneNumber)
+        </th>
+
+
+    </tr>
+    
+    @foreach (var item in Model.Contratoes)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreContrato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Propiedades.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Locador.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Locador.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Locador.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Locatario.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Locatario.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Locatario.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Garante.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Garante.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Garante.PhoneNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.NombreContrato }) |
+                @Html.ActionLink("Details", "Details", new { id = item.NombreContrato }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.NombreContrato })
+            </td>
+        </tr>
+        
+    }
+
+</table>

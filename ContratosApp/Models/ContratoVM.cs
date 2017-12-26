@@ -1,19 +1,16 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace ContratosApp.Models
 {
-    public class Contrato
+    public class ContratoVM
     {
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        [Key]
-        public int ContratoID { get; set; }
-        [Display (Name ="Nombre del Contrato")]
+      /*  
+        [Display(Name = "Nombre del Contrato")]
         public string NombreContrato { get; set; }
         [Required]
         [DataType(DataType.Date)]
@@ -25,11 +22,14 @@ namespace ContratosApp.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Fecha de Finalización")]
         public DateTime FechaFinal { get; set; }
-        public Propiedad Propiedades { get; set; }
-        public Locatario Locatario { get; set; }
-        public Garante Garante { get; set; }
-        public Locador Locador { get; set; }
-        
+        [Display(Name = "Dirección de la Propiedad")]
+        */
+        public Contrato Contratoss { get; set; }
+        public Propiedad Propiedadees { get; set; }
+        public Locatario Locatarios { get; set; }
+        public Garante Garantes { get; set; }
+        public Locador Locadores { get; set; }
 
+        public virtual ICollection<Contrato> Contratoes { get; set; }
     }
 }

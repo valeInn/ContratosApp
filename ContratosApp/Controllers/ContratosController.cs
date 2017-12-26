@@ -10,18 +10,28 @@ using ContratosApp.Models;
 
 namespace ContratosApp.Controllers
 {
-    public class ContratsController : Controller
+    public class ContratosController : Controller
     {
         private ContratoContext db = new ContratoContext();
 
-        // GET: Contrats
+        // GET: Contratos
         public ActionResult Index()
+
         {
-            return View(db.Contratos.ToList());
+
+            
+            var contratos = db.Contratos
+                                        .Include(c => c.Locador)
+                                        .Include(c => c.Locatario)
+                                        .Include(c => c.Garante)
+                                        .Include(c => c.Propiedades);
+
+            return View(contratos.ToList());
+          
         }
 
-        // GET: Contrats/Details/5
-        public ActionResult Details(string id)
+        // GET: Contratos/Details/5
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -35,18 +45,21 @@ namespace ContratosApp.Controllers
             return View(contrato);
         }
 
-        // GET: Contrats/Create
+        // GET: Contratos/Create
         public ActionResult Create()
         {
+
             return View();
+
+            
         }
 
-        // POST: Contrats/Create
+        // POST: Contratos/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Nombre Contrato,Address, Fecha Inicio,Fecha Final,Name,LastName,PhoneNumber, Name,LastName,PhoneNumber,Name,LastName,PhoneNumber")] Contrato contrato)
+        public ActionResult Create([Bind(Include = "ContratoID,NombreContrato,FechaInicio,FechaFinal,Address,Persona")] Contrato contrato)
         {
             if (ModelState.IsValid)
             {
@@ -58,8 +71,8 @@ namespace ContratosApp.Controllers
             return View(contrato);
         }
 
-        // GET: Contrats/Edit/5
-        public ActionResult Edit(string id)
+        // GET: Contratos/Edit/5
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -73,12 +86,12 @@ namespace ContratosApp.Controllers
             return View(contrato);
         }
 
-        // POST: Contrats/Edit/5
+        // POST: Contratos/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "NombreContrato,FechaInicio,FechaFinal")] Contrato contrato)
+        public ActionResult Edit([Bind(Include = "ContratoID,NombreContrato,FechaInicio,FechaFinal")] Contrato contrato)
         {
             if (ModelState.IsValid)
             {
@@ -89,8 +102,8 @@ namespace ContratosApp.Controllers
             return View(contrato);
         }
 
-        // GET: Contrats/Delete/5
-        public ActionResult Delete(string id)
+        // GET: Contratos/Delete/5
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -104,10 +117,10 @@ namespace ContratosApp.Controllers
             return View(contrato);
         }
 
-        // POST: Contrats/Delete/5
+        // POST: Contratos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Contrato contrato = db.Contratos.Find(id);
             db.Contratos.Remove(contrato);
@@ -123,9 +136,47 @@ namespace ContratosApp.Controllers
             }
             base.Dispose(disposing);
         }
-        public ActionResult Buscar()
+        public ViewResult Buscar()
+
         {
+            
             return View();
+        }
+        [HttpPost]
+        public ActionResult BuscarLocatario(string buscarLocatario)
+        {
+            
+
+            {
+                var busqueda = from c in db.Contratos select c;
+                if(!String.IsNullOrEmpty(buscarLocatario)){
+
+                    db.Contratos.Where(c => c.Locatario.Name.Contains(buscarLocatario) || c.Locatario.LastName.Contains(buscarLocatario)).ToList();
+                }
+            }
+            return View("BuscadorLocatario");
+        }
+        
+        public ActionResult BuscarLocador(string buscarLocador)
+        {
+            
+            
+                if (!String.IsNullOrEmpty(buscarLocador)) {
+
+                db.Contratos.Where(c => c.Locador.Name.Contains(buscarLocador) || c.Locador.LastName.Contains(buscarLocador)).ToList();
+            }
+            return View("BuscadorLocador");
+        }
+        
+        public ActionResult BuscarGarante(string buscarGarante)
+        {
+            var busqueda = from c in db.Contratos select c;
+            if(!String.IsNullOrEmpty(buscarGarante))
+
+            {
+                db.Contratos.Where(c => c.Garante.Name.Contains(buscarGarante) || c.Garante.LastName.Contains(buscarGarante)).ToList();
+            }
+            return View("BuscadorGarante");
         }
     }
 }
