@@ -6,6 +6,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     overflow-x: hidden;
+    
 }
 body {
     font-family: "Montserrat", sans-serif;
@@ -108,11 +109,12 @@ h5 {
     padding: 20px 0px;
     clear:both;
 }
-.table, th{
-    border:1px solid;
-    color:#ffffff;
-    border-color:#ffffff;
+.table, th {
+    border: 1px solid;
+    color: #ffffff;
+    border-color: #ffffff;
     text-align: center;
+    
 }
 
 /* Set padding to keep content from hitting the edges */

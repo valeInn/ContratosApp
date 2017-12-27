@@ -44,7 +44,7 @@ namespace ContratosApp.Controllers
 
             //Generamos el objeto MAIL a enviar
             MailMessage mailParaAdministrador = new MailMessage();
-            mailParaAdministrador.From = new MailAddress("contratosapp@gmail.com", "Test ComunidadIT");
+            mailParaAdministrador.From = new MailAddress("contratosapp@gmail.com", "contratosapp123");
             mailParaAdministrador.To.Add("contratosapp@gmail.com");
             mailParaAdministrador.Subject = "Nuevo contacto";
             mailParaAdministrador.Body = "Te contactó: " + nombre + "(" + mail + ").\nSu mensaje fue: " + mensaje;
@@ -54,7 +54,7 @@ namespace ContratosApp.Controllers
 
             //vamos a mandarle un mail al usuario que nos dejó el contacto
             MailMessage mailAUsuario = new MailMessage();
-            mailAUsuario.From = new MailAddress("contratosapp@gmail.com", "Test ComunidadIT");
+            mailAUsuario.From = new MailAddress("contratosapp@gmail.com", "contratosapp123");
             mailAUsuario.To.Add(mail);
             mailAUsuario.Subject = "Gracias por contactarte con nosotros!";
             mailAUsuario.IsBodyHtml = true;

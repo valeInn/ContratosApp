@@ -212,6 +212,7 @@
     <Content Include="Views\Contratos\Buscar.cshtml" />
     <Content Include="Views\ContratoVM\CreateVM.cshtml" />
     <Content Include="Views\ContratoVM\EditVM.cshtml" />
+    <Content Include="Views\Home\Gracias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
