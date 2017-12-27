@@ -18,7 +18,7 @@ namespace ContratosApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateVM([Bind(Include= "NombreContrato,DireccionPropiedad,FechaInicio,FechaFinal,NombreLocador,ApellidoLocador,TelefonoLocador,NombreLocatario,ApellidoLocatario,TelefonoLocatario,NombreGarante,ApellidoGarante,TelefonoGarante")] ContratoVM contrato)
+        public ActionResult CreateVM([Bind(Include = "NombreContrato,DireccionPropiedad,FechaInicio,FechaFinal,NombreLocador,ApellidoLocador,TelefonoLocador,NombreLocatario,ApellidoLocatario,TelefonoLocatario,NombreGarante,ApellidoGarante,TelefonoGarante")] ContratoVM contrato)
         {
             Propiedad newPropiedad = new Propiedad();
             newPropiedad.Address = contrato.DireccionPropiedad;
@@ -46,7 +46,7 @@ namespace ContratosApp.Controllers
             db.Contratos.Add(newContrato);
             db.SaveChanges();
 
-            return View();
+            return RedirectToAction("Index", "Contratos");
         }
     }
 }
