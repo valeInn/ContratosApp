@@ -1,13 +1,10 @@
 ﻿@model ContratosApp.ViewModel.ContratoVM
 @{
-    ViewBag.Title = "CreateVM";
+    ViewBag.Title = "EditVM";
 }
 
-
-
-<h2>Ingresar Datos:</h2>
-
-<form action="@Url.Action("CreateVM","ContratoVM")" method="post">
+<h2>EditVM</h2>
+<form action="@Url.Action("EditVM","ContratoVM")" method="post">
 
     @Html.AntiForgeryToken()
 
@@ -113,20 +110,12 @@
                 @Html.ValidationMessageFor(model => model.TelefonoGarante, "", new { @class = "text-danger" })
             </div>
         </div>
-        <div>
-
-        </div>
-        <div></div>
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guardar" class="btn btn-default" />
+                <input type="submit" value="Guardar Cambios" class="btn btn-default" />
             </div>
         </div>
     </div>
+        
 
 </form>
-<div>
-    @Html.ActionLink("Volver", "Index", "Contratos")
-</div>
-

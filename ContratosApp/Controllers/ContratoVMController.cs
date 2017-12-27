@@ -5,13 +5,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ContratosApp.ViewModel;
+using System.Data.Entity;
+
 namespace ContratosApp.Controllers
 {
     public class ContratoVMController : Controller
     {
         private ContratoContext db = new ContratoContext();
 
-        public ActionResult CreateVM() {
+        public ActionResult CreateVM()
+        {
 
             return View("CreateVM");
         }
@@ -47,6 +50,24 @@ namespace ContratosApp.Controllers
             db.SaveChanges();
 
             return RedirectToAction("Index", "Contratos");
+        }
+        public ActionResult EditVM()
+        {
+            return View("EditVM");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditVM([Bind(Include = "NombreContrato,DireccionPropiedad,FechaInicio,FechaFinal,NombreLocador,ApellidoLocador,TelefonoLocador,NombreLocatario,ApellidoLocatario,TelefonoLocatario,NombreGarante,ApellidoGarante,TelefonoGarante")] ContratoVM contrato)
+
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(contrato).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("IndexVM");
+            }
+            return View(contrato);
+
         }
     }
 }

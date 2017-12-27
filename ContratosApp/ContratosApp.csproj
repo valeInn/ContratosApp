@@ -204,17 +204,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\ContratoVM\IndexVM.cshtml" />
     <Content Include="Views\Contratos\Create.cshtml" />
     <Content Include="Views\Contratos\Delete.cshtml" />
     <Content Include="Views\Contratos\Details.cshtml" />
     <Content Include="Views\Contratos\Edit.cshtml" />
     <Content Include="Views\Contratos\Index.cshtml" />
     <Content Include="Views\Contratos\Buscar.cshtml" />
-    <Content Include="Views\Contratos\BuscadorLocatario.cshtml" />
-    <Content Include="Views\Contratos\BuscadorLocador.cshtml" />
-    <Content Include="Views\Contratos\BuscadorGarante.cshtml" />
     <Content Include="Views\ContratoVM\CreateVM.cshtml" />
+    <Content Include="Views\ContratoVM\EditVM.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
