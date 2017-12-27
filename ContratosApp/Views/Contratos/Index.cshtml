@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<ContratosApp.Models.Contrato>
+@using ContratosApp.ViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -7,7 +8,8 @@
 <h2>Mis Contratos</h2>
 
 <p>
-    @Html.ActionLink("Nuevo Contrato", "Create")
+    <!--@Html.ActionLink("Nuevo Contrato", "CreateVM", "ContratoVMController")-->
+    <a href="@Url.Action("CreateVM", "ContratoVM")">Nuevo Contrato</a>
 </p>
 <p>
     @Html.ActionLink("Buscar Contrato", "Buscar")

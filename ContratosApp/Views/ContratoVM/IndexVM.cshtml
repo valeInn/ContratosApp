@@ -1,4 +1,4 @@
-﻿@model  ContratosApp.Models.ContratoVM
+﻿@model  ContratosApp.ViewModel.ContratoVM
 @{
     ViewBag.Title = "Index";
 }
@@ -20,50 +20,50 @@
     <tr class="tabla">
 
         <th>
-            @Html.DisplayNameFor(model => model.Contratoss.NombreContrato)
+            @Html.DisplayNameFor(model => model.NombreContrato)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Propiedadees.Address)
+            @Html.DisplayNameFor(model => model.DireccionPropiedad)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Contratoss.FechaInicio)
+            @Html.DisplayNameFor(model => model.FechaInicio)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Contratoss.FechaFinal)
+            @Html.DisplayNameFor(model => model.FechaFinal)
         </th>
 
         <th>
-            @Html.DisplayNameFor(model => model.Locadores.Name)
+            @Html.DisplayNameFor(model => model.NombreLocador)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Locadores.LastName)
+            @Html.DisplayNameFor(model => model.ApellidoLocador)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Locadores.PhoneNumber)
+            @Html.DisplayNameFor(model => model.TelefonoLocador)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Locatarios.Name)
+            @Html.DisplayNameFor(model => model.NombreLocatario)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Locatarios.LastName)
+            @Html.DisplayNameFor(model => model.ApellidoLocatario)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Locatarios.PhoneNumber)
+            @Html.DisplayNameFor(model => model.TelefonoLocatario)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Garantes.Name)
+            @Html.DisplayNameFor(model => model.NombreGarante)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Garantes.LastName)
+            @Html.DisplayNameFor(model => model.ApellidoGarante)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Garantes.PhoneNumber)
+            @Html.DisplayNameFor(model => model.TelefonoGarante)
         </th>
 
 
     </tr>
     
-    @foreach (var item in Model.Contratoes)
+    @foreach (var item in Model)
     {
         <tr>
             <td>

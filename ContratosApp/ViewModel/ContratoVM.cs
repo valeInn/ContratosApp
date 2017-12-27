@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace ContratosApp.Models
+namespace ContratosApp.ViewModel
 {
     public class ContratoVM
     {
@@ -33,9 +33,6 @@ namespace ContratosApp.Models
         public string NombreLocador { get; set; }
         public string ApellidoLocador { get; set; }
         public string TelefonoLocador { get; set; }
-
-
-
-        public virtual ICollection<Contrato> Contratoes { get; set; }
+        
     }
 }
