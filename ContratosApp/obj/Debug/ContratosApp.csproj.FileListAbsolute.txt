@@ -50,3 +50,4 @@ C:\Accenture\ContratosApp\ContratosApp\bin\es\System.Web.WebPages.Razor.resource
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.csproj.CoreCompileInputs.cache
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.dll
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.pdb
+C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.csprojResolveAssemblyReference.cache

@@ -26,23 +26,7 @@ namespace ContratosApp.Controllers
                                         .Include(c => c.Propiedades);
                                         
             return View(contratos.ToList());
-          /*
-            return View(); */
-        }
-
-        // GET: Contratos/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Contrato contrato = db.Contratos.Find(id);
-            if (contrato == null)
-            {
-                return HttpNotFound();
-            }
-            return View(contrato);
+          
         }
 
         // GET: Contratos/Create
