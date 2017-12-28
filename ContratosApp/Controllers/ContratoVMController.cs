@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using ContratosApp.ViewModel;
 using System.Data.Entity;
+using System.Net;
 
 namespace ContratosApp.Controllers
 {
@@ -51,23 +52,46 @@ namespace ContratosApp.Controllers
 
             return RedirectToAction("Index", "Contratos");
         }
-        public ActionResult EditVM()
+        public ActionResult EditVM(int? id)
+
+
         {
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Contrato contrato = db.Contratos.Find(id);
+            if (contrato == null)
+            {
+                return HttpNotFound();
+            }
+            
             return View("EditVM");
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditVM([Bind(Include = "NombreContrato,DireccionPropiedad,FechaInicio,FechaFinal,NombreLocador,ApellidoLocador,TelefonoLocador,NombreLocatario,ApellidoLocatario,TelefonoLocatario,NombreGarante,ApellidoGarante,TelefonoGarante")] ContratoVM contrato)
+        public ActionResult EditVM()
 
         {
-            if (ModelState.IsValid)
+            var contratoToUpdate = db.Contratos
+                            .Include(c => c.Locador)
+                            .Include(c => c.Locatario)
+                            .Include(c => c.Garante)
+                            .Include(c => c.Propiedades);
+            if (TryUpdateModel(contratoToUpdate, "",
+      new string[] { "NombreContrato,DireccionPropiedad,FechaInicio,FechaFinal,NombreLocador,ApellidoLocador,TelefonoLocador,NombreLocatario,ApellidoLocatario,TelefonoLocatario,NombreGarante,ApellidoGarante,TelefonoGarante" }))
             {
-                db.Entry(contrato).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("IndexVM");
-            }
-            return View(contrato);
 
-        }
+
+                db.Entry(contratoToUpdate).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index", "Contratos");
+        }            
+                
+               
+     
+       
     }
 }

@@ -206,7 +206,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contratos\Create.cshtml" />
     <Content Include="Views\Contratos\Delete.cshtml" />
-    <Content Include="Views\Contratos\Details.cshtml" />
     <Content Include="Views\Contratos\Edit.cshtml" />
     <Content Include="Views\Contratos\Index.cshtml" />
     <Content Include="Views\Contratos\Buscar.cshtml" />
