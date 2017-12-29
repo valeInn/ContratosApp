@@ -51,3 +51,5 @@ C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.csproj.CoreCompile
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.dll
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.pdb
 C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.csprojResolveAssemblyReference.cache
+C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.Migrations.InitialCreate.resources
+C:\Accenture\ContratosApp\ContratosApp\obj\Debug\ContratosApp.csproj.GenerateResource.Cache

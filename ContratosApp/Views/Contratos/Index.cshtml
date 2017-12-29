@@ -11,7 +11,7 @@
 
     <a href="@Url.Action("CreateVM", "ContratoVM")">Nuevo Contrato</a>
 </p>
-<div class="table-responsive">
+
     <table class="table" >
         
         <tr>
@@ -19,7 +19,7 @@
             <th colspan="3"><strong>Locador</strong></th>
             <th colspan="3"><strong>Locatario</strong></th>
             <th colspan="3"><strong>Garante</strong></th>
-            <th colspan="4"></th>
+            <th colspan="1"><strong>Acciones</strong></th>
         </tr>
 
         <tr>
@@ -109,10 +109,10 @@
                     @Html.DisplayFor(modelItem => item.Garante.PhoneNumber)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar", "EditVM", "ContratoVM", new { id = item.ContratoID }) |
+                    @Html.ActionLink("Editar", "EditVM", new { id = item.ContratoID }) |
                     @Html.ActionLink("Eliminar", "Delete", new { id = item.ContratoID })
                 </td>
             </tr>
         }
     </table>
-    </div>
+    
